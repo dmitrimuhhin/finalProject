@@ -1,4 +1,4 @@
-package com.example.endofthegame.controller;
+package com.example.endofthegame.controller.rest;
 
 
 import com.example.endofthegame.entity.Address;

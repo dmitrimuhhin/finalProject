@@ -10,7 +10,7 @@ HTTP request and reponse
   - cookies
   - body of the response
 
-REST
+REST - hierarchical resources
 - CRUD (eg. incomes)
   - Read
     - URL: /incomes
@@ -28,6 +28,19 @@ REST
     - URL: /incomes/{id}
     - PUT http method - full update - replace
     - PATCH http method - partial update
+
+MVC (Model-View-Controller) pattern
+
+  View - presenter to user
+  Controller - manages views
+  Model - data management = Service + Repository
+
+  View 
+  Controller - manages views
+  Service - application/business logic
+  Repository - manages repository of data (db or other repository)
+
+  Controller depends on Service depends on Repository
 
 Project plan
 Topic: Home budget
