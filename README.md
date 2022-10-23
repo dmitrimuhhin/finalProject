@@ -23,7 +23,7 @@ Technologies:
 Business requirements
 1. Gathering requirements
 - calculate
-- show time
+- show  time
 - income and outcome
 - personal information
 - log in
