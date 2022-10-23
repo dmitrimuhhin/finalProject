@@ -10,6 +10,24 @@ HTTP request and reponse
   - cookies
   - body of the response
 
+REST
+- CRUD (eg. incomes)
+  - Read
+    - URL: /incomes
+    - GET http method
+  - Read one item
+    - URL: /incomes/{id}
+    - GET http method
+  - Create
+    - URL: /incomes
+    - POST http method
+  - Delete
+    - URL: /incomes/{id}
+    - DELETE http method
+  - Update
+    - URL: /incomes/{id}
+    - PUT http method - full update - replace
+    - PATCH http method - partial update
 
 Project plan
 Topic: Home budget
