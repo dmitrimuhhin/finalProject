@@ -12,9 +12,10 @@ public class EndOfTheGameApplication {
         SpringApplication.run(EndOfTheGameApplication.class, args);
     }
 
-    @Bean
-    public Calculator calculator() {
-        return new Calculator();
-    }
+//    use @Bean for durect creation of spring beans
+//    @Bean
+//    public Calculator calculator() {
+//        return new Calculator();
+//    }
 
 }
