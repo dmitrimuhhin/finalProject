@@ -3,7 +3,9 @@ package ee.secretagency.endofthegame.controller.rest;
 import ee.secretagency.endofthegame.entity.Income;
 import ee.secretagency.endofthegame.service.IncomesService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,4 +30,31 @@ public class IncomesController {
 
         return service.readAllIncomes();
     }
+
+//    @GetMapping("/incomes/{id}")
+//    public ResponseEntity<Income> getIncomeById(@PathVariable("id") Long idOfIncome) {
+//        log.info("trying to get income with id: [{}]", idOfIncome);
+//
+//        Income fromRepo = service.readIncomeById(idOfIncome);
+//        boolean
+//        if (fromRepo != null) {
+//            return ResponseEntity.ok(fromRepo);
+//        } else {
+//            return ResponseEntity.notFound().build();
+//        }
+//    }
+
+    @GetMapping("/incomes/{id}")
+    public ResponseEntity<Income> getIncomeById(@PathVariable("id") Long idOfIncome) {
+        log.info("trying to get income with id: [{}]", idOfIncome);
+
+        Income fromRepo = service.readIncomeById(idOfIncome);
+        boolean exists = fromRepo != null;
+        if (exists) {
+            return ResponseEntity.ok(fromRepo);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }

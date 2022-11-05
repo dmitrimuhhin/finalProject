@@ -9,15 +9,25 @@ HTTP request and reponse
   - headers
   - cookies
   - body of the response
+- response code families
+  - 1xx - accepted - processing in progress
+  - 2xx - OK
+  - 3xx - redirects
+  - 4xx - client fault
+  - 5xx - server fault
 
 REST - hierarchical resources
 - CRUD (eg. incomes)
   - Read
     - URL: /incomes
     - GET http method
+    - RETURN: list of all incomes + 200 HTTP response code
   - Read one item
     - URL: /incomes/{id}
     - GET http method
+    - RETURN:
+      - existing income: single object + 200 HTTP response code
+      - nonexistent income: error object + 404 HTTP response code
   - Create
     - URL: /incomes
     - POST http method
