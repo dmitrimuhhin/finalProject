@@ -54,7 +54,7 @@ Technologies:
 Business requirements
 1. Gathering requirements
 - calculate
-- show  time
+- show time
 - income and outcome
 - personal information
 - log in
@@ -98,9 +98,9 @@ Business requirements
     - log in time
     - ip address
     - charts:
-      - daily, weekly, monthly, quaterly, yearly split
+      - daily, weekly, monthly, quarterly, yearly split
       - what type of payments does it support and which category do we put it in
-      - piechart for income and outcame by family members
+      - piechart for income and outcome by family members
       - piechart for expense categories
 - OK - log in
   - username
