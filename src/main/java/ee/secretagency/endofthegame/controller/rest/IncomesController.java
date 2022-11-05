@@ -32,19 +32,6 @@ public class IncomesController {
         return service.readAllIncomes();
     }
 
-//    @GetMapping("/incomes/{id}")
-//    public ResponseEntity<Income> getIncomeById(@PathVariable("id") Long idOfIncome) {
-//        log.info("trying to get income with id: [{}]", idOfIncome);
-//
-//        Income fromRepo = service.readIncomeById(idOfIncome);
-//        boolean
-//        if (fromRepo != null) {
-//            return ResponseEntity.ok(fromRepo);
-//        } else {
-//            return ResponseEntity.notFound().build();
-//        }
-//    }
-
     @GetMapping("/incomes/{id}")
     public Income getIncomeById(@PathVariable("id") Long idOfIncome) {
         log.info("trying to get income with id: [{}]", idOfIncome);
