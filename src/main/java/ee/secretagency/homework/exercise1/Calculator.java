@@ -1,4 +1,4 @@
-package ee.secretagency.endofthegame.homework1;
+package ee.secretagency.homework.exercise1;
 
 
 import org.springframework.web.bind.annotation.*;
