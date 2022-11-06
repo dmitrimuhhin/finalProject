@@ -1,6 +1,5 @@
 package ee.secretagency.endofthegame.entity.enumeration;
 
-// TODO:
 public enum IncomeCategory {
     SALARY,
     GIFT,

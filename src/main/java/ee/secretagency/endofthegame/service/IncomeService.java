@@ -2,21 +2,20 @@ package ee.secretagency.endofthegame.service;
 
 import ee.secretagency.endofthegame.entity.Income;
 import ee.secretagency.endofthegame.exception.IncomeNotFoundException;
-import ee.secretagency.endofthegame.repository.IncomesRepository;
+import ee.secretagency.endofthegame.repository.IncomeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
-import java.util.function.Supplier;
 
 @Service
 @Slf4j
-public class IncomesService {
+public class IncomeService {
 
-    private final IncomesRepository repository;
+    private final IncomeRepository repository;
 
-    public IncomesService(IncomesRepository repository) {
+    public IncomeService(IncomeRepository repository) {
         this.repository = repository;
     }
 
