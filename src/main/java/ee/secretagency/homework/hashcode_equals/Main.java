@@ -1,0 +1,37 @@
+package ee.secretagency.homework.hashcode_equals;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Car toyota = new Car("Toyota", "Corolla");
+        Car toyotaCopy = new Car("Toyota", "Corolla");
+        Car toyota2 = toyota;
+
+        System.out.printf("toyota: [%s]%n", toyota);
+        System.out.println("toyota == toyotaCopy: " + (toyota == toyotaCopy));
+        System.out.println("toyota == toyota2: " + (toyota == toyota2));
+
+        System.out.println("Now with equals()");
+        System.out.println("toyota.equals(toyotaCopy): " + (toyota.equals(toyotaCopy)));
+        System.out.println("toyota.equals(toyota2): " + (toyota.equals(toyota2)));
+
+        List<Car> carList = new ArrayList<>();
+        carList.add(toyota);
+        carList.add(toyotaCopy);
+        System.out.println("carList size: %d".formatted(carList.size()));
+
+        Set<Car> cars = new HashSet<>();
+        cars.add(toyota);
+        cars.add(toyotaCopy);
+        System.out.println("cars size: %d".formatted(cars.size()));
+
+        // hashing collections algorithm
+        // hashCode is used to mark buckets
+        // if we're in the same bucket we're using equals to compare objects
+    }
+}
