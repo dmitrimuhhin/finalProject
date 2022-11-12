@@ -12,7 +12,7 @@ public class EndOfTheGameApplication {
         SpringApplication.run(EndOfTheGameApplication.class, args);
     }
 
-//    use @Bean for durect creation of spring beans
+//    use @Bean for direct creation of spring beans
 //    @Bean
 //    public Calculator calculator() {
 //        return new Calculator();
