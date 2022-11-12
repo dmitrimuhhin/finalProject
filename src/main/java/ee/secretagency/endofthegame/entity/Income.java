@@ -25,4 +25,16 @@ public class Income {
     BigDecimal amount;
     String person;
     ZonedDateTime timestamp;
+    ZonedDateTime creationTimestamp;
+    ZonedDateTime updateTimestamp;
+
+    @PrePersist
+    private void initCurrentCreationTimestamp() {
+        creationTimestamp = ZonedDateTime.now();
+    }
+
+    @PreUpdate
+    private void setCurrentUpdateTimestamp() {
+        updateTimestamp = ZonedDateTime.now();
+    }
 }
