@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class IncomeListComponent implements OnInit {
 
   title: string = 'Income list'
+
   constructor() { }
 
   ngOnInit(): void {
