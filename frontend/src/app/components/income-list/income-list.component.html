@@ -1,4 +1,4 @@
-<h1>{{ title }}</h1>
+<h2>{{ title }}</h2>
 <div *ngFor="let income of incomes">
   <mat-card class="example-card">
     <mat-card-header>
@@ -11,7 +11,6 @@
       <p>Category: {{ income.category }}</p>
       <p>Amount: {{ income.amount }} {{ income.currency }}</p>
       <p>Person: {{ income.person }}</p>
-      <p>Timestamp: {{ income.timestamp }}</p>
     </mat-card-content>
     <mat-card-actions>
       <button mat-button>LIKE</button>
