@@ -8,6 +8,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import { ExpenseListComponent } from './components/expense-list/expense-list.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,12 @@ import { ExpenseListComponent } from './components/expense-list/expense-list.com
     BrowserAnimationsModule,
     HttpClientModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule.forRoot([
+      { path: '', component: IncomeListComponent },
+      { path: 'income-list', component: IncomeListComponent },
+      { path: 'expense-list', component: ExpenseListComponent }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
