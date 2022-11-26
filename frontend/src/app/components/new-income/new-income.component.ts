@@ -8,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class NewIncomeComponent implements OnInit {
 
   categories = [
-    'SALARY',
-    'GIFT',
-    'GOVERNMENT_SUPPORT',
-    'ADHOC_WORK',
-    'RENT',
-    'DIVIDEND',
-    'OTHER'
+    {displayedValue: 'Salary',value: 'SALARY'},
+    {displayedValue: 'Gift',value: 'GIFT'},
+    {displayedValue: 'Government support',value: 'GOVERNMENT_SUPPORT'},
+    {displayedValue: 'Adhoc work',value: 'ADHOC_WORK'},
+    {displayedValue: 'Rent',value: 'RENT'},
+    {displayedValue: 'Dividend',value: 'DIVIDEND'},
+    {displayedValue: 'Other',value: 'OTHER'}
   ]
 
   constructor() { }
