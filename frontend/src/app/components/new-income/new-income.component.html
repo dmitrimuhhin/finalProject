@@ -26,11 +26,24 @@
     <mat-label>Currency</mat-label>
     <input matInput placeholder="Provide currency" value="EUR">
   </mat-form-field>
-<br>
+  <br>
   <mat-form-field>
     <mat-label>Amount</mat-label>
-    <input matNativeControl type="number" placeholder="Provide amount" value="0">
+    <input matNativeControl type="number" placeholder="Provide amount" value="0" step=".01">
   </mat-form-field>
-<br>
+  <br>
+  <mat-form-field>
+    <mat-label>Person</mat-label>
+    <input matInput placeholder="Provide person name" value="Me :)">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <br>
+  <br>
   <button type="submit" mat-raised-button color="primary">Create new income</button>
 </form>
