@@ -18,15 +18,15 @@
     <mat-radio-button class="radio-button" *ngFor="let currency of currencies" [value]="currency">
       {{currency}}
     </mat-radio-button>
-    <mat-radio-button class="radio-button" [value]="">
+    <mat-radio-button class="radio-button" [value]="customCurrency.value">
       or provide your currency
-      <mat-form-field>
-        <mat-label>Currency</mat-label>
-        <input [formControl]="incomeForm.controls.currency" matInput placeholder="Provide currency" value="EUR">
-      </mat-form-field>
     </mat-radio-button>
   </mat-radio-group>
-
+  <mat-form-field>
+    <mat-label>Currency</mat-label>
+    <input #customCurrency matInput placeholder="Provide currency" value="EUR">
+  </mat-form-field>
+  <br>
   <mat-form-field>
     <mat-label>Amount</mat-label>
     <input [formControl]="incomeForm.controls.amount" matNativeControl type="number" placeholder="Provide amount" value="0" step=".01">
